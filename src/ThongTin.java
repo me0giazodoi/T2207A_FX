@@ -1,14 +1,19 @@
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 public class ThongTin {
     public TextField txtFullName;
     public TextField txtEmail;
+    public Text txtInfo;
 
-    public void Submit(ActionEvent actionEvent) {
+
+    public void submit(ActionEvent actionEvent) {
         String fn = txtFullName.getText();
-        String el = txtEmail.getText();
-        System.out.println("Full Name: "+fn);
-        System.out.println("Email: "+el);
+        String em = txtEmail.getText();
+        String txt = txtInfo.getText();
+        txt += "\n=================";
+        txt += "\nFullname: "+fn+"\n"+"Email: "+em;
+        txtInfo.setText(txt);
     }
 }
