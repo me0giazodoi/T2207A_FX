@@ -13,11 +13,14 @@ public class ThongTin {
     public void submit(ActionEvent actionEvent) {
         String fn = txtFullName.getText();
         String em = txtEmail.getText();
-        String txt = txtInfo.getText();
-        txt += "\n=================";
-        txt += "\nFullname: "+fn+"\n"+"Email: "+em;
-        txtInfo.setText(txt);
 
+        Student s = new Student(fn,em);
+        ListStudent.add(s);
+        String txt = "";
+        for (Student sv: ListStudent){
+            txt+= "\n==========\n"+sv.toString();
+        }
+        txtInfo.setText(txt);
 //        // lambda expression
 //        IStudent s1 = (a)->{
 //
