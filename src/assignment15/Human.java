@@ -1,30 +1,30 @@
 package assignment15;
 
 public class Human {
-    String Name;
-    String Phone;
+    String name;
+    String phone;
 
     public Human(String name, String phone) {
-        Name = name;
-        Phone = phone;
+        this.name = name;
+        this.phone = phone;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
     public String toString(){
-        return this.Name+ "--"+this.Phone;
+        return this.name+ "--"+this.phone;
     }
 }
