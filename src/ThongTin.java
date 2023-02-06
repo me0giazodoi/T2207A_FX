@@ -1,26 +1,57 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-import java.util.ArrayList;
 
 public class ThongTin {
     public TextField txtFullName;
     public TextField txtEmail;
     public Text txtInfo;
 
-    public ArrayList<Student> ListStudent = new ArrayList<>();
+    public ObservableList<Student> ListStudent = FXCollections.observableArrayList();
+    public ListView<Student> lv;
+    public Student editStudent;
+
     public void submit(ActionEvent actionEvent) {
         String fn = txtFullName.getText();
         String em = txtEmail.getText();
 
-        Student s = new Student(fn,em);
-        ListStudent.add(s);
-        String txt = "";
-        for (Student sv: ListStudent){
-            txt+= "\n==========\n"+sv.toString();
+        if (editStudent == null){
+            Student s = new Student(fn,em);
+            ListStudent.add(s);
+        }else{
+//            editStudent.setFullName(fn);
+//            editStudent.setEmail(em);
+            for (Student s: ListStudent){
+                if (s.getEmail().equals(editStudent.email)
+                        && s.fullName.equals(editStudent.fullName)){
+                    s.setFullName(fn);
+                    s.setEmail(em);
+                }
+            }
         }
-        txtInfo.setText(txt);
+        lv.setItems( ListStudent);
+        lv.refresh();
+        editStudent = null;
+        clearInput();
+    }
+
+    void clearInput(){
+        txtEmail.clear();
+        txtFullName.clear();
+    }
+
+    public void edit(MouseEvent mouseEvent) {
+        editStudent = lv.getSelectionModel().getSelectedItem();
+        txtFullName.setText(editStudent.getFullName());
+        txtEmail.setText(editStudent.getEmail());
+    }
+}
+
 //        // lambda expression
 //        IStudent s1 = (a)->{
 //
@@ -33,6 +64,3 @@ public class ThongTin {
 //        arrs.stream().filter(s->!s.equals("a")).forEach(s->{
 //            System.out.println(s);
 //        });
-
-    }
-}
