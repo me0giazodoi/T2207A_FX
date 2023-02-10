@@ -1,20 +1,32 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.ListView;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ThongTin {
+
+public class ThongTin implements Initializable {
     public TextField txtFullName;
     public TextField txtEmail;
+    public static TextField stFullName;
+    public static TextField stEmail;
     public Text txtInfo;
 
     public ObservableList<Student> ListStudent = FXCollections.observableArrayList();
-    public ListView<Student> lv;
-    public Student editStudent;
+    public static Student editStudent;
+    public TableView<Student> tbview;
+    public TableColumn<Student,String> cFullname;
+    public TableColumn<Student,String> cEmail;
+    public TableColumn<Student, Button> cAction;
 
     public void submit(ActionEvent actionEvent) {
         String fn = txtFullName.getText();
@@ -34,8 +46,8 @@ public class ThongTin {
                 }
             }
         }
-        lv.setItems( ListStudent);
-        lv.refresh();
+        tbview.setItems( ListStudent);
+        tbview.refresh();
         editStudent = null;
         clearInput();
     }
@@ -46,9 +58,19 @@ public class ThongTin {
     }
 
     public void edit(MouseEvent mouseEvent) {
-        editStudent = lv.getSelectionModel().getSelectedItem();
+//        editStudent = lv.getSelectionModel().getSelectedItem();
         txtFullName.setText(editStudent.getFullName());
         txtEmail.setText(editStudent.getEmail());
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        cFullname.setCellValueFactory(new PropertyValueFactory<>("fullName"));
+        cEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        cAction.setCellValueFactory(new PropertyValueFactory<>("edit"));
+
+        stFullName = txtFullName;
+        stEmail = txtEmail;
     }
 }
 
