@@ -9,7 +9,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateController">
    <children>
-      <Text layoutX="9.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new class" textAlignment="CENTER" wrappingWidth="582.9189453125">
+      <Text layoutX="9.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create A New Class" textAlignment="CENTER" wrappingWidth="582.9189453125">
          <font>
             <Font size="24.0" />
          </font>
