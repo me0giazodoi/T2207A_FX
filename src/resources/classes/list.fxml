@@ -21,7 +21,7 @@
             <TableColumn minWidth="9.0" prefWidth="78.0" text="Action" />
         </columns>
       </TableView>
-      <Button onAction="#goToHome" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: pink;" text="Back" textAlignment="CENTER" />
-      <Button layoutX="561.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: pink;" text="+" />
+      <Button onAction="#backToHome" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: pink;" text="Back" textAlignment="CENTER" />
+      <Button onAction="#goToCreate" layoutX="561.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: pink;" text="+" />
    </children>
 </Pane>
