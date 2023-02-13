@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="controllers.ClassesController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="11.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classes List" textAlignment="CENTER" wrappingWidth="578.984375">
          <font>
@@ -21,7 +21,7 @@
             <TableColumn minWidth="9.0" prefWidth="78.0" text="Action" />
         </columns>
       </TableView>
-      <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: pink;" text="Back" textAlignment="CENTER" />
+      <Button onAction="#goToHome" layoutX="11.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: pink;" text="Back" textAlignment="CENTER" />
       <Button layoutX="561.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: pink;" text="+" />
    </children>
 </Pane>
