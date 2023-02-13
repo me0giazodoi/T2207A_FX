@@ -1,3 +1,6 @@
+package demo;
+
+import demo.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
