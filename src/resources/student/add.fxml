@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.*?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="controllers.AddInfoController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text layoutX="11.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Infomation Student" textAlignment="CENTER" wrappingWidth="578.984375">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToHome" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: pink;" text="&lt;&lt;Back" />
+      <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToInfo" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: pink;" text="&lt;&lt;Back" />
       <Line endX="475.0" layoutX="115.0" layoutY="47.0" startX="-100.0" stroke="#24e0c8" />
       <TextField layoutX="41.0" layoutY="78.0" prefHeight="32.0" prefWidth="196.0" promptText="Name" />
       <TextField layoutX="41.0" layoutY="140.0" prefHeight="32.0" prefWidth="196.0" promptText="Email" />

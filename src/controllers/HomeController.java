@@ -15,4 +15,8 @@ public class HomeController {
         HomeController.rootStage.setScene(new Scene(root,600,400));
     }
 
+    public void goToStudent(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../resources/student/info.fxml"));
+        HomeController.rootStage.setScene(new Scene(root,600,400));
+    }
 }

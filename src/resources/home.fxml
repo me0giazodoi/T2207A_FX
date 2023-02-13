@@ -8,7 +8,7 @@
 
 <Pane fx:controller="controllers.HomeController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="346.0" layoutY="107.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="168.0" style="-fx-background-color: pink;" text="Students">
+      <Button onAction="#goToStudent" layoutX="346.0" layoutY="107.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="168.0" style="-fx-background-color: pink;" text="Students">
          <font>
             <Font size="24.0" />
          </font>
