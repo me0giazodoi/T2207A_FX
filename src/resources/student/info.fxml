@@ -15,14 +15,14 @@
       </Text>
       <Button layoutX="565.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToAdd" style="-fx-background-color: pink;" text="+" />
       <Button layoutX="11.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToHome" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: pink;" text="Back" textAlignment="CENTER" />
-      <TableView layoutX="11.0" layoutY="64.0" prefHeight="322.0" prefWidth="579.0">
+      <TableView fx:id="tbStudent" layoutX="11.0" layoutY="64.0" prefHeight="322.0" prefWidth="579.0">
          <columns>
-            <TableColumn prefWidth="45.0" text="ID" />
-            <TableColumn minWidth="9.0" prefWidth="210.0" text="Name" />
-            <TableColumn minWidth="9.0" prefWidth="132.0" text="Email" />
-            <TableColumn minWidth="9.0" prefWidth="66.0" text="Date" />
-            <TableColumn minWidth="9.0" prefWidth="67.0" text="Gender" />
-            <TableColumn minWidth="9.0" prefWidth="57.0" text="ID Class" />
+            <TableColumn fx:id="cId" prefWidth="45.0" text="ID" />
+            <TableColumn fx:id="cName" minWidth="9.0" prefWidth="210.0" text="Name" />
+            <TableColumn fx:id="cEmail" minWidth="9.0" prefWidth="132.0" text="Email" />
+            <TableColumn fx:id="cDate" minWidth="9.0" prefWidth="66.0" text="Date" />
+            <TableColumn fx:id="cGender" minWidth="9.0" prefWidth="67.0" text="Gender" />
+            <TableColumn fx:id="cIdClass" minWidth="9.0" prefWidth="57.0" text="ID Class" />
          </columns>
       </TableView>
    </children>

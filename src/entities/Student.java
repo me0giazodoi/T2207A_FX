@@ -1,16 +1,17 @@
 package entities;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Student {
     Integer id;
     String name;
     String email;
-    LocalDate birthday;
+    Date birthday;
     String gender;
     Integer class_id;
 
-    public Student(Integer id, String name, String email, LocalDate birthday, String gender, Integer class_id) {
+    public Student(Integer id, String name, String email, Date birthday, String gender, Integer class_id) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -43,11 +44,11 @@ public class Student {
         this.email = email;
     }
 
-    public LocalDate getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
