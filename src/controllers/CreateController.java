@@ -27,7 +27,7 @@ public class CreateController {
             if (name.isEmpty() || room.isEmpty()) {
                 throw new Exception("Vui lòng điền đầy đủ thông tin");
             }
-            Database db = new Database();
+            Database db = Database.getInstance();
             Statement stt = db.getStatement();
             String sql = "insert into lophoc(name,room) values('"+name+"','"+room+"')";
             stt.executeUpdate(sql);

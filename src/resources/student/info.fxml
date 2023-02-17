@@ -20,9 +20,10 @@
             <TableColumn fx:id="cId" prefWidth="45.0" text="ID" />
             <TableColumn fx:id="cName" minWidth="9.0" prefWidth="210.0" text="Name" />
             <TableColumn fx:id="cEmail" minWidth="9.0" prefWidth="132.0" text="Email" />
-            <TableColumn fx:id="cDate" minWidth="9.0" prefWidth="66.0" text="Date" />
+            <TableColumn fx:id="cBirthday" minWidth="9.0" prefWidth="66.0" text="Date" />
             <TableColumn fx:id="cGender" minWidth="9.0" prefWidth="67.0" text="Gender" />
-            <TableColumn fx:id="cIdClass" minWidth="9.0" prefWidth="57.0" text="ID Class" />
+            <TableColumn fx:id="cClass" minWidth="9.0" prefWidth="57.0" text="ID Class" />
+            <TableColumn fx:id="cAction" prefWidth="67.0" text="Action" />
          </columns>
       </TableView>
    </children>

@@ -18,9 +18,9 @@
       <Line endX="475.0" layoutX="115.0" layoutY="47.0" startX="-100.0" stroke="#24e0c8" />
       <TextField fx:id="txtName" layoutX="41.0" layoutY="78.0" prefHeight="32.0" prefWidth="196.0" promptText="Name" />
       <TextField fx:id="txtEmail" layoutX="41.0" layoutY="140.0" prefHeight="32.0" prefWidth="196.0" promptText="Email" />
-      <TextField fx:id="txtGender" layoutX="285.0" layoutY="78.0" prefHeight="32.0" prefWidth="196.0" promptText="Gender" />
-      <Button layoutX="41.0" layoutY="200.0" mnemonicParsing="false" onAction="#submit" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: pink;" text="Submit" />
-      <DatePicker fx:id="txtDate" layoutX="285.0" layoutY="140.0" prefHeight="32.0" prefWidth="196.0" promptText="Date" />
-      <ComboBox fx:id="txtClassId" layoutX="285.0" layoutY="202.0" prefHeight="32.0" prefWidth="196.0" promptText="Class_id" />
+      <Button layoutX="404.0" layoutY="198.0" mnemonicParsing="false" onAction="#submit" prefHeight="36.0" prefWidth="77.0" style="-fx-background-color: pink;" text="Submit" />
+      <DatePicker fx:id="txtBirthday" layoutX="285.0" layoutY="78.0" prefHeight="32.0" prefWidth="196.0" promptText="Date" />
+      <ComboBox fx:id="cbClass" layoutX="285.0" layoutY="140.0" prefHeight="32.0" prefWidth="196.0" promptText="Class_id" />
+      <ComboBox fx:id="cbGender" layoutX="41.0" layoutY="200.0" prefHeight="32.0" prefWidth="196.0" promptText="Gender" />
    </children>
 </Pane>
