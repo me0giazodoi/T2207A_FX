@@ -1,6 +1,9 @@
 package controllers;
 
+import daopattern.ClassesDAO;
+import daopattern.StudentDAO;
 import database.Database;
+import entities.Classes;
 import entities.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,6 +23,7 @@ import java.net.URL;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class InfoStudentController implements Initializable {
@@ -50,27 +54,10 @@ public class InfoStudentController implements Initializable {
         cBirthday.setCellValueFactory(new PropertyValueFactory<>("birthday"));
         cGender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         cClass.setCellValueFactory(new PropertyValueFactory<>("class_id"));
-        ObservableList<Student> list = FXCollections.observableArrayList();
-        try {
-            Database db = Database.getInstance();
-            Statement stt = db.getStatement();
-            String sql = "select * from sinhvien";
-            ResultSet rs = stt.executeQuery(sql);
-            while (rs.next()){
-                Integer id = rs.getInt("id");
-                String name = rs.getString("name");
-                String email = rs.getString("email");
-                Date birthday = rs.getDate("birthday");
-                String gender = rs.getString("gender");
-                Integer class_id = rs.getInt("class_id");
-                Student s = new Student(id,name,email,birthday,gender,class_id);
-                list.add(s);
-                tbStudent.setItems(list);
-            }
-        }catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(e.getMessage());
-            alert.show();
-        }
+
+        StudentDAO cd = StudentDAO.getInstance();
+        ArrayList<Student> tths = cd.getAll();
+        tbStudent.getItems().addAll(tths);
+        tbStudent.refresh();
     }
 }

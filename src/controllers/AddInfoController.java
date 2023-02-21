@@ -1,7 +1,10 @@
 package controllers;
 
+import daopattern.ClassesDAO;
+import daopattern.StudentDAO;
 import database.Database;
 import entities.Classes;
+import entities.Student;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -70,11 +73,12 @@ public class AddInfoController implements Initializable {
             if (name.isEmpty() || email.isEmpty() || birthday.isEmpty() || gender.isEmpty() || class_id == null) {
                 throw new Exception("Vui lòng điền đầy đủ thông tin");
             }
-            Database db = Database.getInstance();
-            Statement stt = db.getStatement();
-            String sql = "insert into sinhvien(name,email,birthday,gender,class_id) values('"+name+"','"+email+"','"+birthday+"','"+gender+"','"+class_id+"')";
-            stt.executeUpdate(sql);
-            backToInfo(null);
+            Student s = new Student(null, name, email, Date.valueOf(birthday), gender, class_id);
+            StudentDAO cd = StudentDAO.getInstance();
+            if (cd.create(s))
+                backToInfo(null);
+            else
+                throw new Exception("Không thể tạo lớp học");
         }catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(e.getMessage());
