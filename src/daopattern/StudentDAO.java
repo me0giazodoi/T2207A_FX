@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class StudentDAO {
+public class StudentDAO implements DAOInterface<Student> {
     private static StudentDAO instance;
     private StudentDAO(){
 
