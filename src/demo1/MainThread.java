@@ -11,7 +11,12 @@ public class MainThread {
 
         Runnable r = ()->{
             for (int i=0;i<20;i++){
-                System.out.println();
+                System.out.println("Main i ="+i);
+                try {
+                    Thread.sleep(1000);
+                }catch (Exception e){
+
+                }
             }
         };
 
