@@ -37,7 +37,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         HomeController.rootStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("resources/home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("resources/time.fxml"));
         primaryStage.setScene(new Scene(root,888,688));
         primaryStage.show();
     }
